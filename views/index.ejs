@@ -1,0 +1,21 @@
+<a href="/create">Create</a>
+
+
+<h1>index</h1>
+
+<% result.forEach((item) => {  %>
+  
+  <div>
+    <ul>
+      <li><%= item.inn  %></li>
+      <li><%= item.dose %></li>
+      <a href="<%= item.id %>"><button>Show</button></a>
+      <a href="<%= item.id %>/edit"><button>Edit</button></a>
+      <form action="/<%=item.id%>?_method=DELETE" method="post">
+        <button>Delete</button>
+      </form>
+    </ul>
+  </div>
+<% }); %>
+
+

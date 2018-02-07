@@ -1,0 +1,8 @@
+<% item.forEach((item) => { %>
+  <h2>Edit <%= item.name %></h2>
+  <form action="/<%= item.id %>?_method=PUT" method="POST">
+    <input type="text" name="item[inn]"  value="<%=item.inn%>">
+    <input type="text" name="item[dose]"  value="<%=item.dose%>">
+    <button>Edit</button>
+  </form>
+<% }); %>
